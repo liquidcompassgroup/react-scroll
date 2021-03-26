@@ -37,7 +37,7 @@ export default {
     props = Object.assign({}, props, { absolute: false });
 
     let containerId = props.containerId;
-    let containerClassName = this.props.containerClassName;
+    let containerClassName = props.containerClassName;
     let container = props.container;
 
     let containerElement;
