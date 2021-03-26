@@ -13,6 +13,7 @@ const scrollHash = require('./scroll-hash');
 
 const protoTypes = {
   to: PropTypes.string.isRequired,
+  containerClassName: PropTypes.string,
   containerId: PropTypes.string,
   container: PropTypes.object,
   activeClass: PropTypes.string,
