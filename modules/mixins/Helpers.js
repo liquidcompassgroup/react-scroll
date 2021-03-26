@@ -148,10 +148,15 @@ const Helpers = {
 
       getScrollSpyContainer() {
         let containerId = this.props.containerId;
+        let containerClassName = this.props.containerClassName;
         let container = this.props.container;
 
         if (containerId) {
           return document.getElementById(containerId);
+        }
+
+        if (containerClassName) {
+          return document.getElementsByClassName(containerClassName)[0];
         }
 
         if (container && container.nodeType) {
