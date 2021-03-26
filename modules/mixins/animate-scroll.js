@@ -163,7 +163,9 @@ const setContainer = (options) => {
       ? document.getElementById(options.containerId)
       : options.container && options.container.nodeType
         ? options.container
-        : document;
+        : options.containerClassName
+          ? document.getElementsByClassName(options.containerClassName)[0]
+          : document;
 };
 
 const animateTopScroll = (scrollOffset, options, to, target) => {

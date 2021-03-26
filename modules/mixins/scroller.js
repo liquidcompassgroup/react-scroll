@@ -37,11 +37,14 @@ export default {
     props = Object.assign({}, props, { absolute: false });
 
     let containerId = props.containerId;
+    let containerClassName = this.props.containerClassName;
     let container = props.container;
 
     let containerElement;
     if (containerId) {
       containerElement = document.getElementById(containerId);
+    } else if (containerClassName) {
+      containerElement = document.getElementsByClassName(containerClassName)[0];
     } else if (container && container.nodeType) {
       containerElement = container;
     } else {
